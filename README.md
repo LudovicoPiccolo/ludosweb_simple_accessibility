@@ -9,6 +9,10 @@
 - Support users with visual, motor, or cognitive disabilities  
 - Facilitate compliance with Directive (EU) 2019/882 and the Italian Stanca Law (Law 4/2004)
 
+> ⚠️ **Work in Progress**:  
+We are actively developing features to fully support the **European Accessibility Act (EAA)**, which will become mandatory for digital services starting in 2025.
+
+
 ## ⚙️ Main Features
 
 - ✅ Ready-to-use accessibility interface  
@@ -71,6 +75,11 @@ https://ludosweb.it
 - Consentire personalizzazioni visive (font, spaziature, colori)
 - Supportare utenti con disabilità visive, motorie o cognitive
 - Facilitare la conformità alla Direttiva (UE) 2019/882 e alla Legge Stanca (L. 4/2004)
+
+> ⚠️ **Lavori in corso:**:  
+Stiamo sviluppando attivamente funzionalità per supportare pienamente il Regolamento Europeo sull'Accessibilità (EAA), che diventerà obbligatorio per i servizi digitali a partire dal 2025.
+
+
 
 ## ⚙️ Funzionalità principali
 
