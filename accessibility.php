@@ -155,10 +155,22 @@ if (elements.dynamicContentPause.checked) {
       scroll-behavior: auto !important;
     }\`;
     document.head.appendChild(style);
+    document.querySelectorAll('video').forEach(video => {
+      video.pause();
+    });
+    document.querySelectorAll('iframe').forEach(iframe => {
+      try {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        iframe.contentWindow.postMessage('{"method":"pause"}', '*');
+      } catch (e) {}
+    });
   }
 } else {
   const pauseStyle = document.getElementById("pause-dynamics");
   if (pauseStyle) pauseStyle.remove();
+  document.querySelectorAll('video').forEach(video => {
+    if (!video.paused) video.play();
+  });
 }
 
 const existingOverlay = document.querySelector('.reading-mask-follow');
