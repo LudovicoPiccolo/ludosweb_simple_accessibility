@@ -28,6 +28,7 @@
       complianceBtn: "Dichiarazione di conformità",
       complianceTitle: "Dichiarazione di conformità",
       complianceStatus: "Stato: Parzialmente conforme",
+      mod_contenuti_title:"Contenuti",
       complianceDescription: `<p>Questo sito web è parzialmente conforme 
         ai requisiti previsti dalla norma UNI CEI EN 301549 e dalla Direttiva (UE) 2019/882 
         sull'accessibilità dei prodotti e dei servizi.</p>
@@ -110,6 +111,7 @@
       complianceBtn: "Accessibility statement",
       complianceTitle: "Accessibility Statement",
       complianceStatus: "Status: Partially compliant",
+      mod_contenuti_title:"Contents",
       complianceDescription: `<p>This website is partially compliant 
         with the requirements of UNI CEI EN 301549 and Directive (EU) 2019/882 
         on the accessibility of products and services.</p>
@@ -193,6 +195,7 @@
       complianceBtn: "Déclaration de conformité",
       complianceTitle: "Déclaration de conformité",
       complianceStatus: "État : Partiellement conforme",
+      mod_contenuti_title:"Contenu",
       complianceDescription: `<p>Ce site web est partiellement conforme 
         aux exigences de la norme UNI CEI EN 301549 et de la Directive (UE) 2019/882 
         sur l’accessibilité des produits et services.</p>
@@ -275,6 +278,7 @@
       complianceBtn: "Konformitätserklärung",
       complianceTitle: "Konformitätserklärung",
       complianceStatus: "Status: Teilweise konform",
+      mod_contenuti_title:"Inhalt",
       complianceDescription: `<p>Diese Website entspricht teilweise 
         den Anforderungen der Norm UNI CEI EN 301549 und der Richtlinie (EU) 2019/882 
         zur Barrierefreiheit von Produkten und Dienstleistungen.</p>
@@ -357,6 +361,7 @@
       complianceBtn: "Declaración de conformidad",
       complianceTitle: "Declaración de conformidad",
       complianceStatus: "Estado: Parcialmente conforme",
+      mod_contenuti_title:"Contenido",
       complianceDescription: `<p>Este sitio web es parcialmente conforme 
         con los requisitos de la norma UNI CEI EN 301549 y la Directiva (UE) 2019/882 
         sobre accesibilidad de productos y servicios.</p>
