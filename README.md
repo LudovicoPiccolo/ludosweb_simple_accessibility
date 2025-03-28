@@ -61,6 +61,7 @@ Lovingly crafted by Ludosweb
 https://ludosweb.it
 ----------------------------------------------
 
+# Simple Usability JS
 
 **Simple Usability JS** è una libreria JavaScript leggera e facile da integrare che aggiunge automaticamente al tuo sito un pannello accessibilità completo per migliorarne l'usabilità, la leggibilità e la conformità alle normative europee sull'accessibilità.
 
