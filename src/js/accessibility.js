@@ -72,12 +72,7 @@ export function applyAccessibility(elements) {
     const fontFamily = elements.readableFont.checked ? 'Arial, sans-serif' : 'inherit';
     const fontSize = parseInt(elements.fontSize.value);
 
-    const fontSettingsChanged =
-        fontSize !== defaultFontSettings.fontSize ||
-        letterSpacing !== defaultFontSettings.letterSpacing ||
-        lineHeight !== defaultFontSettings.lineHeight ||
-        textAlign !== defaultFontSettings.textAlign ||
-        elements.readableFont.checked !== defaultFontSettings.readableFont;
+
 
     html.style.removeProperty('--acc-font-size');
     html.style.removeProperty('--acc-letter-spacing');
@@ -86,13 +81,30 @@ export function applyAccessibility(elements) {
     html.style.removeProperty('--acc-font-family');
     html.classList.remove("accessible_font");
 
+    const fontSettingsChanged =
+    fontSize !== defaultFontSettings.fontSize ||
+    letterSpacing !== defaultFontSettings.letterSpacing ||
+    lineHeight !== defaultFontSettings.lineHeight ||
+    textAlign !== defaultFontSettings.textAlign ||
+    elements.readableFont.checked !== defaultFontSettings.readableFont;
+
     if (fontSettingsChanged) {
-        applyFontScaling(fontSize / 100 * 16);
-        html.style.setProperty('--acc-letter-spacing', letterSpacing + 'px');
-        html.style.setProperty('--acc-line-height', lineHeight);
-        html.style.setProperty('--acc-text-align', textAlign);
-        html.style.setProperty('--acc-font-family', fontFamily);
-        html.classList.add("accessible_font");
+      html.classList.add("accessible_font");
+    }
+    if (fontSize !== defaultFontSettings.fontSize) {
+      applyFontScaling(fontSize / 100 * 16);
+    }
+    if (letterSpacing !== defaultFontSettings.letterSpacing) {
+      html.style.setProperty('--acc-letter-spacing', letterSpacing + 'px');
+    }
+    if (lineHeight !== defaultFontSettings.lineHeight) {
+      html.style.setProperty('--acc-line-height', lineHeight);
+    }
+    if (textAlign !== defaultFontSettings.textAlign) {
+      html.style.setProperty('--acc-text-align', textAlign);
+    }
+    if (fontFamily !== defaultFontSettings.fontFamily) {
+      html.style.setProperty('--acc-font-family', fontFamily);
     }
 
     // Other settings
@@ -100,9 +112,8 @@ export function applyAccessibility(elements) {
     html.classList.toggle("large-cursor", elements.largeCursor.checked);
 
     const activeButton = document.querySelector('.mode-btn.active');
-    console.log("Classi prima della rimozione:", body.className);
     body.classList.remove("contrastHigh", "contrastLow", "monochrome", "sepiaTone", "nightMode");
-    console.log("Classi dopo la rimozione:", body.className);
+
 
     
     if (activeButton) {

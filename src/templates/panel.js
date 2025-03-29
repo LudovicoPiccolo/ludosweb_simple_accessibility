@@ -25,7 +25,7 @@ export const panelTemplate = `<div id="accessibility-btn" class="accessibility-b
 </button>
 
 <!-- Select per cambio lingua -->
-<select id="languageSelect" style="margin-top: 0.5rem; width: 100%;">
+<select id="languageSelect">
     <option value="it">Italiano</option>
     <option value="en">English</option>
     <option value="fr">Français</option>
