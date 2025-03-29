@@ -32,7 +32,7 @@ We are actively developing features to fully support the **European Accessibilit
 ```html
 <link href="accessibility_v1.css" rel="stylesheet">
 <script>
-  window.accessibility_var = {
+ const accessibility_var = {
     lang: 'it', // it, en, fr, de, es
     title: 'Your website name',
     mail: 'info@yoursite.com'
@@ -63,7 +63,7 @@ MIT License — feel free to use, modify, and improve it!
 
 🙌 Author
 Lovingly crafted by Ludosweb
-https://ludosweb.it
+https://www.ludosweb.com
 ----------------------------------------------
 
 # Simple Usability JS
@@ -101,7 +101,7 @@ Stiamo sviluppando attivamente funzionalità per supportare pienamente il Regola
 ```html
 <link href="accessibility_v1.css" rel="stylesheet">
 <script>
-  window.accessibility_var = {
+  const accessibility_var = {
     lang: 'it', // it, en, fr, de, es
     title: 'Nome del tuo sito',
     mail: 'info@iltuosito.com'
@@ -133,6 +133,6 @@ MIT License — sentiti libero di usarlo, modificarlo e migliorarlo!
 
 🙌 Autore
 Realizzato con cura da Ludosweb
-https://ludosweb.it
+https://www.ludosweb.com
 
 
