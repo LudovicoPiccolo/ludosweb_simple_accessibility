@@ -1,5 +1,8 @@
 # Simple Usability JS
 
+![Anteprima del pannello accessibilità](screenshot.png)
+
+
 **Simple Usability JS** is a lightweight, easy-to-integrate JavaScript library that automatically adds a complete accessibility panel to your website to improve usability, readability, and compliance with European accessibility regulations.
 
 ## 🎯 Goals

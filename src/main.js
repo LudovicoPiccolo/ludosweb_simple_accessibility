@@ -78,11 +78,11 @@ document.addEventListener('keydown', function(e) {
 document.getElementById('languageSelect').addEventListener('change', function() {
     const selectedLang = this.value;
     localStorage.setItem("accessibilitySettings_lang", selectedLang);
-    
+    const langPack = i18n[selectedLang] || i18n['it'];
     document.querySelectorAll("[data-i18n]").forEach(elem => {
         const key = elem.getAttribute("data-i18n");
-        const langPack = window.i18nAccessibility[selectedLang] || window.i18nAccessibility['it'];
-        const value = langPack[key] || window.i18nAccessibility['it'][key];
+        
+        const value = langPack[key] || i18n['it'][key];
 
         if (value) {
             if (key === 'complianceDescription') {

@@ -156,11 +156,6 @@ html {
   font-size: 0.95rem;
 }
 
-#accessibility-panel input[type="range"],
-#accessibility-panel select {
-  width: 60%;
-  margin-left: 10px;
-}
 
 #reset-btn {
   width: 100%;
