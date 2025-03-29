@@ -34,8 +34,8 @@ We are actively developing features to fully support the **European Accessibilit
 To clone and run the project locally:
 
 ```bash
-git clone https://github.com/LudovicoPiccolo/lw_accessibility
-cd lw_accessibility
+git clone https://github.com/LudovicoPiccolo/ludosweb_simple_accessibility
+cd ludosweb_simple_accessibility
 npm install
 npm run dev
 ```
@@ -114,8 +114,8 @@ Stiamo sviluppando attivamente funzionalità per supportare pienamente il Regola
 Per clonare ed eseguire il progetto in locale:
 
 ```bash
-git clone https://github.com/LudovicoPiccolo/lw_accessibility
-cd lw_accessibility
+git clone https://github.com/LudovicoPiccolo/ludosweb_simple_accessibility
+cd ludosweb_simple_accessibility
 npm install
 npm run dev
 ```
