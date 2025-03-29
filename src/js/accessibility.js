@@ -96,13 +96,20 @@ export function applyAccessibility(elements) {
     }
 
     // Other settings
-    html.classList.add("accessible");
+    // html.classList.add("accessible");
     html.classList.toggle("large-cursor", elements.largeCursor.checked);
-    body.classList.toggle("contrast-high", elements.contrastHigh.checked);
-    body.classList.toggle("contrast-low", elements.contrastLow.checked);
-    body.classList.toggle("monochrome", elements.monochrome.checked);
-    body.classList.toggle("sepia-mode", elements.sepiaTone.checked);
-    body.classList.toggle("night-mode", elements.nightMode.checked);
+
+    const activeButton = document.querySelector('.mode-btn.active');
+    console.log("Classi prima della rimozione:", body.className);
+    body.classList.remove("contrastHigh", "contrastLow", "monochrome", "sepiaTone", "nightMode");
+    console.log("Classi dopo la rimozione:", body.className);
+
+    
+    if (activeButton) {
+        body.classList.add(activeButton.id); // Usa l'ID del pulsante come classe
+    }
+
+
     body.classList.toggle("highlight-hover", elements.highlightHover.checked);
     body.classList.toggle("no-images", elements.hideImages.checked);
 
@@ -202,7 +209,7 @@ export function resetAccessibility(elements) {
         document.body.style.removeProperty('transform-origin');
         document.documentElement.style.removeProperty('zoom');
         
-        body.classList.remove("contrast-high", "contrast-low", "monochrome", "sepia-mode", "night-mode", "highlight-hover", "no-images");
+        body.classList.remove("contrastHigh", "contrastLow", "monochrome", "sepiaTone", "nightMode", "highlight-hover", "no-images");
         html.classList.remove("large-cursor");
         
         const existingOverlay = document.querySelector('.reading-mask-follow');

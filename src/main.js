@@ -97,5 +97,23 @@ document.getElementById('languageSelect').addEventListener('change', function() 
     });
 });
 
+        const buttons = document.querySelectorAll('.mode-btn');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Controlla se il pulsante è già attivo
+        const isActive = button.classList.contains('active');
+    
+        if (isActive) {
+          button.classList.remove('active');
+        } else {
+          buttons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+        }
+        applyAccessibility(elements);
+      });
+    });
+
+
 // Initialize the UI
 initUI(elements);

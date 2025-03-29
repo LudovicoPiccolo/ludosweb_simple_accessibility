@@ -10,6 +10,46 @@ html {
   overflow-x: auto;
 }
 
+.mode-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Due colonne */
+  gap: 10px; /* Spaziatura tra i pulsanti */
+  margin-top: 10px;
+}
+
+.mode-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.mode-btn svg {
+  margin-bottom: 5px; /* Spaziatura tra l'icona e il testo */
+  fill: var(--primary-color);
+}
+
+.mode-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.mode-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.mode-btn.active svg {
+  fill: white;
+}
+
 .accessible #accessibility-panel,
 .accessible #accessibility-panel * {
   font-size: 16px !important;
@@ -35,6 +75,22 @@ html {
   cursor: pointer;
   z-index: 9999;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+#accessibility-btn .check-icon {
+  position: absolute;
+  bottom: -5px;
+  right: 27px;
+  background-color: red;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: none; /* Nascosto di default */
+  align-items: center;
+  justify-content: center;
+}
+#accessibility-btn.accessibility-active .check-icon {
+  display: flex; /* Mostra il check quando il pulsante è attivo */
 }
 
 #accessibility-btn:hover {
@@ -139,13 +195,13 @@ html {
 
 
 
-.contrast-high,.contrast-high *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.contrastHigh,.contrastHigh *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   background-color: #000 !important;
   color: #fff !important;
   border-color: #fff !important;
 }
 
-.contrast-low *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.contrastLow *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   filter: contrast(150%) !important;
 }
 
@@ -204,12 +260,12 @@ html {
 }
 
 
-.sepia-mode,.sepia-mode *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.sepiaTone,.sepiaTone *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   background-color: #f4ecd8 !important;
   color: #5b4636 !important;
 }
 
-.night-mode,.night-mode *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.nightMode,.nightMode *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
 }

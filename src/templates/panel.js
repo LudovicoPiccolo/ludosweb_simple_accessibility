@@ -5,11 +5,16 @@
  * Description: Template for the accessibility panel and related UI components.
  */
 
-export const panelTemplate = `<div id="accessibility-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-          <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
-      </svg>
-  </div>
+export const panelTemplate = `<div id="accessibility-btn" class="accessibility-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+    <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
+  </svg>
+  <span class="check-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16">
+      <path d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4z"/>
+    </svg>
+  </span>
+</div>
 
 <div id="accessibility-panel">
 <button id="reset-btn" onclick="resetAccessibility()">
@@ -75,30 +80,38 @@ export const panelTemplate = `<div id="accessibility-btn">
 
 <h4 data-i18n="mod_col_title"></h4>
 
-<label class="label-tooltip">
-  <input type="checkbox" id="contrastHigh"> <span data-i18n="contrastHigh"></span>
-  <span class="tooltip-content" data-i18n="contrastHighe_tooltip"></span>
-</label>
-
-<label class="label-tooltip">
-  <input type="checkbox" id="contrastLow"> <span data-i18n="contrastLow"></span>
-  <span class="tooltip-content" data-i18n="contrastLow_tooltip"></span>
-</label>
-
-<label class="label-tooltip">
-  <input type="checkbox" id="monochrome"> <span data-i18n="monochrome"></span>
-  <span class="tooltip-content" data-i18n="monochrome_tooltip"></span>
-</label>
-
-<label class="label-tooltip">
-  <input type="checkbox" id="sepiaTone"> <span data-i18n="sepiaTone"></span>
-  <span class="tooltip-content" data-i18n="sepiaTone_tooltip"></span>
-</label>
-
-<label class="label-tooltip">
-  <input type="checkbox" id="nightMode"> <span data-i18n="nightMode"></span>
-  <span class="tooltip-content" data-i18n="nightMode_tooltip"></span>
-</label>
+<div class="mode-buttons">
+  <button class="mode-btn" id="contrastHigh">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8v16z"/>
+    </svg>
+    <span data-i18n="contrastHigh"></span>
+  </button>
+  <button class="mode-btn" id="contrastLow">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10V2z"/>
+    </svg>
+    <span data-i18n="contrastLow"></span>
+  </button>
+  <button class="mode-btn" id="monochrome">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10H12V2z"/>
+    </svg>
+    <span data-i18n="monochrome"></span>
+  </button>
+  <button class="mode-btn" id="sepiaTone">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10H12V2z"/>
+    </svg>
+    <span data-i18n="sepiaTone"></span>
+  </button>
+  <button class="mode-btn" id="nightMode">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+      <path d="M9.37 5.51C10.19 3.93 11.99 3 14 3c3.87 0 7 3.13 7 7 0 2.01-.93 3.81-2.51 4.63C17.99 18.87 15.13 21 12 21c-3.87 0-7-3.13-7-7 0-3.13 2.13-5.99 4.37-7.49z"/>
+    </svg>
+    <span data-i18n="nightMode"></span>
+  </button>
+</div>
 
 <h4 data-i18n="supp_title"></h4>
 
