@@ -30,6 +30,7 @@ We are actively developing features to fully support the **European Accessibilit
 ### 1. Include the file
 
 ```html
+<link href="accessibility_v1.css" rel="stylesheet">
 <script>
   window.accessibility_var = {
     lang: 'it', // it, en, fr, de, es
@@ -98,6 +99,7 @@ Stiamo sviluppando attivamente funzionalità per supportare pienamente il Regola
 ### 1. Includi il file
 
 ```html
+<link href="accessibility_v1.css" rel="stylesheet">
 <script>
   window.accessibility_var = {
     lang: 'it', // it, en, fr, de, es

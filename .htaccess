@@ -1,4 +1,0 @@
-RewriteEngine On
-
-# Redirige accessibility.js verso accessibility.php mantenendo query string
-RewriteRule ^accessibility\.js$ accessibility.php [L,QSA]
