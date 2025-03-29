@@ -41,8 +41,6 @@ export const i18n = {
     complianceStatus: "Stato: Parzialmente conforme",
     mod_contenuti_title: "Contenuti",
     complianceDescription: `<div>
-  <h1>Dichiarazione di Accessibilità</h1>
-
   <h2>Stato di conformità</h2>
   <p>Crediamo che il web debba essere accessibile a chiunque, indipendentemente dalle proprie capacità. Per questo motivo, ci impegniamo a rendere questo sito conforme alle linee guida WCAG 2.1 livello AA, secondo la normativa UNI CEI EN 301549 e la Direttiva (UE) 2019/882.</p>
 
@@ -134,8 +132,6 @@ export const i18n = {
     complianceStatus: "Status: Partially compliant",
     mod_contenuti_title: "Contents",
     complianceDescription: `<div>
-  <h1>Accessibility Statement</h1>
-
   <h2>Compliance Status</h2>
   <p>We believe that the web should be accessible to everyone, regardless of their abilities. For this reason, we are committed to making this site compliant with WCAG 2.1 Level AA guidelines, in accordance with the UNI CEI EN 301549 standard and the EU Directive 2019/882.</p>
 
@@ -228,8 +224,6 @@ export const i18n = {
     complianceStatus: "État : Partiellement conforme",
     mod_contenuti_title: "Contenu",
     complianceDescription: `<div>
-  <h1>Déclaration d'accessibilité</h1>
-
   <h2>État de conformité</h2>
   <p>Nous croyons que le web doit être accessible à tous, quelles que soient leurs capacités. C’est pourquoi nous nous engageons à rendre ce site conforme aux directives WCAG 2.1 niveau AA, conformément à la norme UNI CEI EN 301549 et à la Directive (UE) 2019/882.</p>
 
@@ -322,8 +316,6 @@ export const i18n = {
     complianceStatus: "Status: Teilweise konform",
     mod_contenuti_title: "Inhalt",
     complianceDescription: `<div>
-  <h1>Barrierefreiheits-Erklärung</h1>
-
   <h2>Konformitätsstatus</h2>
   <p>Wir sind der Meinung, dass das Internet für alle zugänglich sein sollte, unabhängig von ihren Fähigkeiten. Daher verpflichten wir uns, diese Website gemäß den WCAG 2.1 Richtlinien auf Stufe AA, der Norm UNI CEI EN 301549 und der EU-Richtlinie 2019/882 barrierefrei zu gestalten.</p>
 
@@ -416,8 +408,6 @@ export const i18n = {
     complianceStatus: "Estado: Parcialmente conforme",
     mod_contenuti_title: "Contenido",
     complianceDescription: `<div>
-  <h1>Declaración de Accesibilidad</h1>
-
   <h2>Estado de conformidad</h2>
   <p>Creemos que la web debe ser accesible para todos, independientemente de sus capacidades. Por eso, nos comprometemos a hacer este sitio conforme a las pautas WCAG 2.1 nivel AA, según la norma UNI CEI EN 301549 y la Directiva (UE) 2019/882.</p>
 
