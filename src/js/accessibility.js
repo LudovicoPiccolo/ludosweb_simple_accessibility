@@ -220,6 +220,11 @@ export function resetAccessibility(elements) {
         document.body.style.removeProperty('transform-origin');
         document.documentElement.style.removeProperty('zoom');
         
+        const activeButtons = document.querySelectorAll('.mode-btn.active');
+        activeButtons.forEach(button => {
+          button.classList.remove('active');
+        });
+        
         body.classList.remove("contrastHigh", "contrastLow", "monochrome", "sepiaTone", "nightMode", "highlight-hover", "no-images");
         html.classList.remove("large-cursor");
         
