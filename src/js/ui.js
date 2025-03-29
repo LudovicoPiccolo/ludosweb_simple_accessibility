@@ -1,3 +1,9 @@
+/**
+ * Accessibility Ludosweb Project
+ * Author: Piccolo Ludovico
+ * Organization: Ludosweb
+ * Description: UI initialization and management for accessibility features.
+ */
 import { i18n, userLang } from './i18n';
 import { applyAccessibility, resetAccessibility } from './accessibility';
 import { loadSettings, saveSettings } from './settings';

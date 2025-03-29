@@ -1,3 +1,10 @@
+/**
+ * Accessibility Ludosweb Project
+ * Author: Piccolo Ludovico
+ * Organization: Ludosweb
+ * Description: Constants for default font settings and scaling map.
+ */
+
 export const defaultFontSettings = {
     fontSize: 100,
     letterSpacing: '0',

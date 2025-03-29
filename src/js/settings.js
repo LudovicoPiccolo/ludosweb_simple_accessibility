@@ -1,3 +1,10 @@
+/**
+ * Accessibility Ludosweb Project
+ * Author: Piccolo Ludovico
+ * Organization: Ludosweb
+ * Description: Functions for saving and loading accessibility settings.
+ */
+
 export function saveSettings(elements, btn) {
     const data = {};
     Object.keys(elements).forEach(k => {

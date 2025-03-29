@@ -1,3 +1,10 @@
+/**
+ * Accessibility Ludosweb Project
+ * Author: Piccolo Ludovico
+ * Organization: Ludosweb
+ * Description: Functions for managing and applying accessibility features.
+ */
+
 import { defaultFontSettings, scaleMap } from './constants';
 import { saveSettings } from './settings';
 

@@ -1,3 +1,10 @@
+/**
+ * Accessibility Ludosweb Project
+ * Author: Piccolo Ludovico
+ * Organization: Ludosweb
+ * Description: Internationalization (i18n) strings and language management for accessibility features.
+ */
+
 const userLang = (window.accessibility_var && window.accessibility_var.lang) || 'it';
 const siteTitle = (window.accessibility_var && window.accessibility_var.title) || 'Sito generico';
 const siteMail = (window.accessibility_var && window.accessibility_var.mail) || 'info@example.com';

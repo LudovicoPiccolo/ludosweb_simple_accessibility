@@ -25,12 +25,24 @@ We are actively developing features to fully support the **European Accessibilit
 - ⌨️ Keyboard navigation  
 - 📄 Modal with accessibility compliance statement  
 
+
+## 🧪 How to run locally
+
+To clone and run the project locally:
+
+```bash
+git clone https://github.com/LudovicoPiccolo/lw_accessibility
+cd lw_accessibility
+npm install
+npm run dev
+```
+
 ## 🚀 How to Integrate
 
 ### 1. Include the file
 
 ```html
-<link href="accessibility_v1.css" rel="stylesheet">
+<link href="accessibility.css" rel="stylesheet">
 <script>
  const accessibility_var = {
     lang: 'it', // it, en, fr, de, es
@@ -94,12 +106,24 @@ Stiamo sviluppando attivamente funzionalità per supportare pienamente il Regola
 - ⌨️ Navigazione da tastiera
 - 📄 Modal con dichiarazione di conformità accessibilità
 
+## 🧪 Come eseguire in locale
+
+Per clonare ed eseguire il progetto in locale:
+
+```bash
+git clone https://github.com/LudovicoPiccolo/lw_accessibility
+cd lw_accessibility
+npm install
+npm run dev
+```
+
+
 ## 🚀 Come si integra
 
 ### 1. Includi il file
 
 ```html
-<link href="accessibility_v1.css" rel="stylesheet">
+<link href="accessibility.css" rel="stylesheet">
 <script>
   const accessibility_var = {
     lang: 'it', // it, en, fr, de, es

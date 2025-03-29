@@ -1,3 +1,10 @@
+/**
+ * Accessibility Ludosweb Project
+ * Author: Piccolo Ludovico
+ * Organization: Ludosweb
+ * Description: Main script for initializing and managing accessibility features.
+ */
+
 import './style.css';
 import { panelTemplate } from './templates/panel';
 import { initUI } from './js/ui';
