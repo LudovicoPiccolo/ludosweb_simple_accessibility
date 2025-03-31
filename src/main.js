@@ -1,9 +1,11 @@
-/**
+
+    /**
  * Accessibility Ludosweb Project
  * Author: Piccolo Ludovico
  * Organization: Ludosweb
  * Description: Main script for initializing and managing accessibility features.
  */
+
 
 import './style.css';
 import { panelTemplate } from './templates/panel';
@@ -12,6 +14,8 @@ import { applyAccessibility, resetAccessibility } from './js/accessibility';
 import { loadSettings } from './js/settings';
 import { i18n, userLang } from './js/i18n';
 
+(function LudoswebAccessibility() {
+    
 // HTML template injection
 document.documentElement.insertAdjacentHTML('beforeend', panelTemplate);
 
@@ -117,3 +121,4 @@ document.getElementById('languageSelect').addEventListener('change', function() 
 
 // Initialize the UI
 initUI(elements);
+})();
