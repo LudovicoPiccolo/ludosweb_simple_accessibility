@@ -69,7 +69,7 @@ html {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--primary-color);
+  background-color: #0d6efd;
   color: white;
   width: 40px;
   height: 40px;
@@ -87,7 +87,7 @@ html {
   position: absolute;
   bottom: -5px;
   right: 27px;
-  background-color: red;
+  background-color: #176e24;
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -113,64 +113,12 @@ html {
 }
 
 #lw-a-accessibility-btn.accessibility-active {
-  background-color: #c0392b;
+  background-color: #176e24;
   /* rosso accessibilità attiva */
 }
 
 
 
-/* Prefisso tutti i selettori con 'lw-a-' (Ludosweb Accessibility) */
-.lw-a-accessibility-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--primary-color);
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  z-index: 9999;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-#lw-a-accessibility-btn .check-icon {
-  position: absolute;
-  bottom: -5px;
-  right: 27px;
-  background-color: red;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  display: none;
-  /* Nascosto di default */
-  align-items: center;
-  justify-content: center;
-}
-
-#lw-a-accessibility-btn.accessibility-active .check-icon {
-  display: flex;
-  /* Mostra il check quando il pulsante è attivo */
-}
-
-#lw-a-accessibility-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-#lw-a-accessibility-btn svg {
-  width: 30px;
-  height: 30px;
-}
-
-#lw-a-accessibility-btn.accessibility-active {
-  background-color: #c0392b;
-  /* rosso accessibilità attiva */
-}
 
 
 
