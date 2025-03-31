@@ -34,7 +34,7 @@ export function loadSettings(elements) {
     if (!elements) return;
 
     const data = JSON.parse(localStorage.getItem("accessibilitySettings"));
-    const btn = document.getElementById("accessibility-btn");
+    const btn = document.getElementById("lw-a-accessibility-btn");
 
     if (data) {
         Object.keys(elements).forEach(k => {

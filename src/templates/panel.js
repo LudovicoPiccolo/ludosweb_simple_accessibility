@@ -5,7 +5,7 @@
  * Description: Template for the accessibility panel and related UI components.
  */
 
-export const panelTemplate = `<div id="accessibility-btn" class="accessibility-btn">
+export const panelTemplate = `<div id="lw-a-accessibility-btn" class="lw-a-accessibility-btn">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
     <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
   </svg>
@@ -16,7 +16,7 @@ export const panelTemplate = `<div id="accessibility-btn" class="accessibility-b
   </span>
 </div>
 
-<div id="accessibility-panel">
+<div id="accessibility-panel" class="lw-a-panel">
 <button id="reset-btn" onclick="resetAccessibility()">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
     <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
@@ -25,56 +25,97 @@ export const panelTemplate = `<div id="accessibility-btn" class="accessibility-b
 </button>
 
 <!-- Select per cambio lingua -->
-<select id="languageSelect">
-    <option value="it">Italiano</option>
-    <option value="en">English</option>
-    <option value="fr">Français</option>
-    <option value="de">Deutsch</option>
-    <option value="es">Español</option>
-</select>
+<div class="lw-a-select-wrapper">
+  <select id="languageSelect" class="lw-a-accessible-select">
+      <option value="it">Italiano</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+  </select>
+</div>
+
+<label class="label-tooltip">
+  
+  <span data-i18n="textAlign" ></span>
+  <div class="lw-a-select-wrapper">
+    <select id="textAlign" class="lw-a-accessible-select">
+      <option value="" data-i18n="textAlignA"></option>
+      <option value="left" data-i18n="textAlignleft"></option>
+      <option value="center" data-i18n="textAligncenter"></option>
+      <option value="right" data-i18n="textAlignright"></option>
+    </select>
+  </div>
+  <span class="tooltip-content" data-i18n="textAlign_tooltip"></span>
+</label>
+
 
 
 <h4 data-i18n="mod_contenuti_title"></h4>
 
 <label class="label-tooltip">
 <span data-i18n="scaleContents"></span>
-  <input type="range" id="pageScale" min="90" max="110" step="5" value="100">
+  <div class="scale-controls">
+    <button class="scale-btn" id="decreaseScale">-</button>
+    <span id="scaleValue">100%</span>
+    <button class="scale-btn" id="increaseScale">+</button>
+    <input type="range" id="pageScale" min="90" max="110" step="5" value="100" style="display: none;">
+  </div>
   <span class="tooltip-content" data-i18n="scaleContents_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <span data-i18n="fontSize"></span>
-  <input type="range" id="fontSize" min="90" max="300" step="10" value="100">
+  <div class="scale-controls">
+    <button class="scale-btn" id="decreaseFontSize">-</button>
+    <span id="fontSizeValue">100%</span>
+    <button class="scale-btn" id="increaseFontSize">+</button>
+    <input type="range" id="fontSize" min="90" max="300" step="10" value="100" style="display: none;">
+  </div>
   <span class="tooltip-content" data-i18n="fontSize_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <span data-i18n="letterSpacing"></span>
-  <input type="range" id="letterSpacing" min="0" max="10" step="0.5" value="0">
+  <div class="scale-controls">
+    <button class="scale-btn" id="decreaseLetterSpacing">-</button>
+    <span id="letterSpacingValue">0</span>
+    <button class="scale-btn" id="increaseLetterSpacing">+</button>
+    <input type="range" id="letterSpacing" min="0" max="10" step="0.5" value="0" style="display: none;">
+  </div>
   <span class="tooltip-content" data-i18n="letterSpacing_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  
   <span data-i18n="lineHeight"></span>
-  <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.5">
+  <div class="scale-controls">
+    <button class="scale-btn" id="decreaseLineHeight">-</button>
+    <span id="lineHeightValue">1.5</span>
+    <button class="scale-btn" id="increaseLineHeight">+</button>
+    <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.5" style="display: none;">
+  </div>
   <span class="tooltip-content" data-i18n="lineHeight_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   
   <span data-i18n="textAlign"></span>
-  <select id="textAlign">
-    <option value="" data-i18n="textAlignA"></option>
-    <option value="left" data-i18n="textAlignleft"></option>
-    <option value="center" data-i18n="textAligncenter"></option>
-    <option value="right" data-i18n="textAlignright"></option>
-  </select>
+  <div class="lw-a-select-wrapper">
+    <select id="textAlign" class="lw-a-accessible-select">
+      <option value="" data-i18n="textAlignA"></option>
+      <option value="left" data-i18n="textAlignleft"></option>
+      <option value="center" data-i18n="textAligncenter"></option>
+      <option value="right" data-i18n="textAlignright"></option>
+    </select>
+  </div>
   <span class="tooltip-content" data-i18n="textAlign_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="readableFont"> <span data-i18n="readableFont"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="readableFont" class="accessible-checkbox"> 
+    <span data-i18n="readableFont"></span>
+  </div>
   <span class="tooltip-content" data-i18n="readableFont_tooltip"></span>
 </label>
 
@@ -116,39 +157,60 @@ export const panelTemplate = `<div id="accessibility-btn" class="accessibility-b
 <h4 data-i18n="supp_title"></h4>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="screenReader"> <span data-i18n="screenReader"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="screenReader" class="accessible-checkbox">
+    <span data-i18n="screenReader"></span>
+  </div>
   <span class="tooltip-content" data-i18n="screenReader_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="keyboardNav"> <span data-i18n="keyboardNav"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="keyboardNav" class="accessible-checkbox">
+    <span data-i18n="keyboardNav"></span>
+  </div>
   <span class="tooltip-content" data-i18n="keyboardNav_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="dynamicContentPause"> <span data-i18n="dynamicContentPause"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="dynamicContentPause" class="accessible-checkbox">
+    <span data-i18n="dynamicContentPause"></span>
+  </div>
   <span class="tooltip-content" data-i18n="dynamicContentPause_tooltip"></span>
 </label>
 
 <h4 data-i18n="orient_title"></h4>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="highlightHover"> <span data-i18n="highlightHover"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="highlightHover" class="accessible-checkbox">
+    <span data-i18n="highlightHover"></span>
+  </div>
   <span class="tooltip-content" data-i18n="highlightHover_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="hideImages"> <span data-i18n="hideImages"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="hideImages" class="accessible-checkbox">
+    <span data-i18n="hideImages"></span>
+  </div>
   <span class="tooltip-content" data-i18n="hideImages_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="largeCursor"> <span data-i18n="largeCursor"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="largeCursor" class="accessible-checkbox">
+    <span data-i18n="largeCursor"></span>
+  </div>
   <span class="tooltip-content" data-i18n="largeCursor_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <input type="checkbox" id="readingMask"> <span data-i18n="readingMask"></span>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="readingMask" class="accessible-checkbox">
+    <span data-i18n="readingMask"></span>
+  </div>
   <span class="tooltip-content" data-i18n="readingMask_tooltip"></span>
 </label>
 

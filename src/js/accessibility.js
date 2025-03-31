@@ -65,6 +65,12 @@ export function applyAccessibility(elements) {
     const html = document.documentElement;
     const body = document.body;
 
+    // Update all value displays
+    document.getElementById('scaleValue').textContent = elements.pageScale.value + '%';
+    document.getElementById('fontSizeValue').textContent = elements.fontSize.value + '%';
+    document.getElementById('letterSpacingValue').textContent = elements.letterSpacing.value + 'px';
+    document.getElementById('lineHeightValue').textContent = elements.lineHeight.value;
+
     // Font settings
     const letterSpacing = elements.letterSpacing.value;
     const lineHeight = elements.lineHeight.value;
@@ -199,15 +205,28 @@ export function applyAccessibility(elements) {
     
     
     // Save settings after applying them
-    const btn = document.getElementById("accessibility-btn");
+    const btn = document.getElementById("lw-a-accessibility-btn");
     saveSettings(elements, btn);
 }
 
 export function resetAccessibility(elements) {
+    const html = document.documentElement;
+    const body = document.body;
+    
+    // Reset all display values using constants
+    document.getElementById('scaleValue').textContent = defaultFontSettings.pageScale + '%';
+    document.getElementById('fontSizeValue').textContent = defaultFontSettings.fontSize + '%';
+    document.getElementById('letterSpacingValue').textContent = defaultFontSettings.letterSpacing + 'px';
+    document.getElementById('lineHeightValue').textContent = defaultFontSettings.lineHeight;
+    
+    // Reset all range inputs using constants
+    document.getElementById('pageScale').value = defaultFontSettings.pageScale;
+    document.getElementById('fontSize').value = defaultFontSettings.fontSize;
+    document.getElementById('letterSpacing').value = defaultFontSettings.letterSpacing;
+    document.getElementById('lineHeight').value = defaultFontSettings.lineHeight;
 
-        const html = document.documentElement;
-        const body = document.body;
-        
+
+
         html.classList.remove("accessible");
         html.classList.remove("accessible_font");
         
@@ -250,7 +269,7 @@ export function resetAccessibility(elements) {
           }
         });
         
-        document.getElementById("accessibility-btn").classList.remove("accessibility-active");
+        document.getElementById("lw-a-accessibility-btn").classList.remove("accessibility-active");
 }
 
 function followMouse(e) {

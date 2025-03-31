@@ -16,9 +16,15 @@ export function initUI(elements) {
     }
 
     setTimeout(() => {
-        if (loadSettings(elements)) {
-            applyAccessibility(elements);
+      if (loadSettings(elements)) {
+        // Update scale value display if different from default
+        const scaleDisplay = document.getElementById('scaleValue');
+        const pageScale = document.getElementById('pageScale');
+        if (scaleDisplay && pageScale && pageScale.value !== '100') {
+            scaleDisplay.textContent = pageScale.value + '%';
         }
+        applyAccessibility(elements);
+    }
     }, 100);
     
     const langPack = i18n[userLang] || i18n['it'];

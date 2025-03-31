@@ -65,7 +65,7 @@ html {
   font-family: 'Arial', sans-serif !important;
 }
 
-#accessibility-btn {
+#lw-a-accessibility-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -83,7 +83,7 @@ html {
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-#accessibility-btn .check-icon {
+#lw-a-accessibility-btn .check-icon {
   position: absolute;
   bottom: -5px;
   right: 27px;
@@ -97,22 +97,22 @@ html {
   justify-content: center;
 }
 
-#accessibility-btn.accessibility-active .check-icon {
+#lw-a-accessibility-btn.accessibility-active .check-icon {
   display: flex;
   /* Mostra il check quando il pulsante è attivo */
 }
 
-#accessibility-btn:hover {
+#lw-a-accessibility-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-#accessibility-btn svg {
+#lw-a-accessibility-btn svg {
   width: 30px;
   height: 30px;
 }
 
-#accessibility-btn.accessibility-active {
+#lw-a-accessibility-btn.accessibility-active {
   background-color: #c0392b;
   /* rosso accessibilità attiva */
 }
@@ -197,25 +197,25 @@ html {
   height: 20px;
 }
 
-.highlight-hover *:hover:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.highlight-hover *:hover:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   outline: 3px solid #00aaff !important;
   outline-offset: 2px;
 }
 
-.monochrome *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.monochrome *:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   filter: grayscale(100%) !important;
 }
 
 
 
 .contrastHigh,
-.contrastHigh *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.contrastHigh *:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   background-color: #000 !important;
   color: #fff !important;
   border-color: #fff !important;
 }
 
-.contrastLow *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.contrastLow *:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   filter: contrast(150%) !important;
 }
 
@@ -224,7 +224,7 @@ html {
 }
 
 .large-cursor body,
-.large-cursor *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.large-cursor *:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="black"><circle cx="16" cy="16" r="15" stroke="white" stroke-width="2"/></svg>'), auto !important;
 }
 
@@ -275,13 +275,13 @@ html {
 
 
 .sepiaTone,
-.sepiaTone *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.sepiaTone *:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   background-color: #f4ecd8 !important;
   color: #5b4636 !important;
 }
 
 .nightMode,
-.nightMode *:not(#accessibility-panel *):not(#accessibility-btn):not(#accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
+.nightMode *:not(#accessibility-panel *):not(#lw-a-accessibility-btn):not(#lw-a-accessibility-btn *):not(#accessibility-div):not(.material-symbols-outlined) {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
 }

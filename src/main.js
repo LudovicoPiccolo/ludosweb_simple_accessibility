@@ -1,5 +1,5 @@
 
-    /**
+/**
  * Accessibility Ludosweb Project
  * Author: Piccolo Ludovico
  * Organization: Ludosweb
@@ -43,7 +43,7 @@ const elements = {
 
 // Initialize UI components
 const panel = document.getElementById("accessibility-panel");
-const btn = document.getElementById("accessibility-btn");
+const btn = document.getElementById("lw-a-accessibility-btn");
 
 // Event listeners
 document.getElementById('reset-btn').addEventListener('click', () => resetAccessibility(elements));
@@ -121,4 +121,70 @@ document.getElementById('languageSelect').addEventListener('change', function() 
 
 // Initialize the UI
 initUI(elements);
-})();
+// Scale buttons functionality
+document.getElementById('decreaseScale').addEventListener('click', () => {
+    const scaleInput = document.getElementById('pageScale');
+    if (parseInt(scaleInput.value) > parseInt(scaleInput.min)) {
+        scaleInput.value = parseInt(scaleInput.value) - parseInt(scaleInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+document.getElementById('increaseScale').addEventListener('click', () => {
+    const scaleInput = document.getElementById('pageScale');
+    if (parseInt(scaleInput.value) < parseInt(scaleInput.max)) {
+        scaleInput.value = parseInt(scaleInput.value) + parseInt(scaleInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+// Font size buttons
+document.getElementById('decreaseFontSize').addEventListener('click', () => {
+    const fontInput = document.getElementById('fontSize');
+    if (parseInt(fontInput.value) > parseInt(fontInput.min)) {
+        fontInput.value = parseInt(fontInput.value) - parseInt(fontInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+document.getElementById('increaseFontSize').addEventListener('click', () => {
+    const fontInput = document.getElementById('fontSize');
+    if (parseInt(fontInput.value) < parseInt(fontInput.max)) {
+        fontInput.value = parseInt(fontInput.value) + parseInt(fontInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+// Letter spacing buttons
+document.getElementById('decreaseLetterSpacing').addEventListener('click', () => {
+    const spacingInput = document.getElementById('letterSpacing');
+    if (parseFloat(spacingInput.value) > parseFloat(spacingInput.min)) {
+        spacingInput.value = parseFloat(spacingInput.value) - parseFloat(spacingInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+document.getElementById('increaseLetterSpacing').addEventListener('click', () => {
+    const spacingInput = document.getElementById('letterSpacing');
+    if (parseFloat(spacingInput.value) < parseFloat(spacingInput.max)) {
+        spacingInput.value = parseFloat(spacingInput.value) + parseFloat(spacingInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+// Line height buttons
+document.getElementById('decreaseLineHeight').addEventListener('click', () => {
+    const heightInput = document.getElementById('lineHeight');
+    if (parseFloat(heightInput.value) > parseFloat(heightInput.min)) {
+        heightInput.value = parseFloat(heightInput.value) - parseFloat(heightInput.step);
+        applyAccessibility(elements);
+    }
+});
+
+document.getElementById('increaseLineHeight').addEventListener('click', () => {
+    const heightInput = document.getElementById('lineHeight');
+    if (parseFloat(heightInput.value) < parseFloat(heightInput.max)) {
+        heightInput.value = parseFloat(heightInput.value) + parseFloat(heightInput.step);
+        applyAccessibility(elements);
+    }
+});})();
