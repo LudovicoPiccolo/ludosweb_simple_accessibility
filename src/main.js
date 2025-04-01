@@ -19,6 +19,15 @@ import { i18n, userLang } from './js/i18n';
 // HTML template injection
 document.documentElement.insertAdjacentHTML('beforeend', panelTemplate);
 
+
+// Add this where you initialize the accessibility panel
+const position = accessibility_var?.position || 'right';
+if (position === 'left') {
+    document.getElementById('lw-a-accessibility-btn').classList.add('position-left');
+    document.getElementById('accessibility-panel').classList.add('position-left');
+}
+
+
 // Initialize elements object
 const elements = {
     fontSize: document.getElementById("fontSize"),
@@ -188,3 +197,4 @@ document.getElementById('increaseLineHeight').addEventListener('click', () => {
         applyAccessibility(elements);
     }
 });})();
+

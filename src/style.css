@@ -67,8 +67,8 @@ html {
 
 #lw-a-accessibility-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 55px;
+  right: 10px; /* Default position */
   background-color: #0d6efd;
   color: white;
   width: 40px;
@@ -119,13 +119,15 @@ html {
 
 
 
-
-
+#lw-a-accessibility-btn.position-left {
+  right: auto;
+  left: 10px;
+}
 
 #accessibility-panel {
   position: fixed;
   bottom: 90px;
-  right: 20px;
+  right: 20px; /* Default position */
   width: 320px;
   background-color: var(--background-color);
   border-radius: 10px;
@@ -475,4 +477,8 @@ html.accessible_font th:not(.material-symbols-outlined):not(#accessibility-panel
 
 .lw-a-select-wrapper {
   margin-top: 4px;
+}
+#accessibility-panel.position-left {
+  right: auto;
+  left: 20px;
 }
