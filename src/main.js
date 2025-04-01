@@ -17,7 +17,7 @@ import { i18n, userLang } from './js/i18n';
 (function LudoswebAccessibility() {
     
 // HTML template injection
-document.documentElement.insertAdjacentHTML('beforeend', panelTemplate);
+document.body.insertAdjacentHTML('beforeend', panelTemplate);
 
 
 // Add this where you initialize the accessibility panel
