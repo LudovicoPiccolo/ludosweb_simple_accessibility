@@ -5,9 +5,9 @@
  * Description: Internationalization (i18n) strings and language management for accessibility features.
  */
 
-const userLang = (window.accessibility_var && window.accessibility_var.lang) || 'it';
-const siteTitle = (window.accessibility_var && window.accessibility_var.title) || 'Sito generico';
-const siteMail = (window.accessibility_var && window.accessibility_var.mail) || 'info@example.com';
+const userLang = (window.accessibility_var?.lang || accessibility_var?.lang) || 'it';
+const siteTitle = (window.accessibility_var?.title || accessibility_var?.title) || 'Sito generico';
+const siteMail = (window.accessibility_var?.mail || accessibility_var?.mail) || 'info@example.com';
 
 export const i18n = {
   it: {
@@ -41,7 +41,6 @@ export const i18n = {
     complianceStatus: "Stato: Parzialmente conforme",
     mod_contenuti_title: "Contenuti",
     complianceDescription: `<div>
-  <h2>Stato di conformità</h2>
   <p>Crediamo che il web debba essere accessibile a chiunque, indipendentemente dalle proprie capacità. Per questo motivo, ci impegniamo a rendere questo sito conforme alle linee guida WCAG 2.1 livello AA, secondo la normativa UNI CEI EN 301549 e la Direttiva (UE) 2019/882.</p>
 
   <h2>Tecnologie e funzionalità di supporto</h2>
@@ -132,7 +131,6 @@ export const i18n = {
     complianceStatus: "Status: Partially compliant",
     mod_contenuti_title: "Contents",
     complianceDescription: `<div>
-  <h2>Compliance Status</h2>
   <p>We believe that the web should be accessible to everyone, regardless of their abilities. For this reason, we are committed to making this site compliant with WCAG 2.1 Level AA guidelines, in accordance with the UNI CEI EN 301549 standard and the EU Directive 2019/882.</p>
 
   <h2>Supporting Technologies and Features</h2>
@@ -224,7 +222,6 @@ export const i18n = {
     complianceStatus: "État : Partiellement conforme",
     mod_contenuti_title: "Contenu",
     complianceDescription: `<div>
-  <h2>État de conformité</h2>
   <p>Nous croyons que le web doit être accessible à tous, quelles que soient leurs capacités. C’est pourquoi nous nous engageons à rendre ce site conforme aux directives WCAG 2.1 niveau AA, conformément à la norme UNI CEI EN 301549 et à la Directive (UE) 2019/882.</p>
 
   <h2>Technologies et fonctionnalités d'assistance</h2>
@@ -284,191 +281,6 @@ export const i18n = {
     largeCursor_tooltip: "Agrandit le curseur pour les personnes malvoyantes ou à mobilité réduite.",
     readingMask_tooltip: "Ajoute un masque de lecture qui suit le curseur pour aider à se concentrer.",
     mod_col_title: "Modes de couleur"
-  },
-  de: {
-    resetBtn: "Einstellungen zurücksetzen",
-    scaleContents: "Inhalte skalieren",
-    pageScaleLabel: "Seitenskalierung",
-    fontSize: "Textgröße",
-    letterSpacing: "Buchstabenabstand",
-    lineHeight: "Zeilenhöhe",
-    textAlign: "Textausrichtung",
-    textAlignA: "Standard",
-    textAlignleft: "Links",
-    textAligncenter: "Zentriert",
-    textAlignright: "Rechts",
-    readableFont: "Gut lesbare Schriftart",
-    contrastHigh: "Hoher Kontrast",
-    contrastLow: "Niedriger Kontrast",
-    monochrome: "Monochrom",
-    sepiaTone: "Sepia-Modus",
-    nightMode: "Nachtmodus",
-    screenReader: "Screenreader-Kompatibilität",
-    keyboardNav: "Tastaturnavigation",
-    dynamicContentPause: "Dynamische Inhalte pausieren",
-    highlightHover: "Hover-Effekt hervorheben",
-    hideImages: "Bilder ausblenden",
-    largeCursor: "Großer Mauszeiger",
-    readingMask: "Lesemaske",
-    scaleContents_tooltip: "Vergrößert die gesamte Seite zur besseren Lesbarkeit.",
-    complianceBtn: "Konformitätserklärung",
-    complianceTitle: "Konformitätserklärung",
-    complianceStatus: "Status: Teilweise konform",
-    mod_contenuti_title: "Inhalt",
-    complianceDescription: `<div>
-  <h2>Konformitätsstatus</h2>
-  <p>Wir sind der Meinung, dass das Internet für alle zugänglich sein sollte, unabhängig von ihren Fähigkeiten. Daher verpflichten wir uns, diese Website gemäß den WCAG 2.1 Richtlinien auf Stufe AA, der Norm UNI CEI EN 301549 und der EU-Richtlinie 2019/882 barrierefrei zu gestalten.</p>
-
-  <h2>Unterstützende Technologien und Funktionen</h2>
-  <p>Die Website bietet Werkzeuge, mit denen Nutzer die Benutzeroberfläche an ihre individuellen Bedürfnisse anpassen können. Zu den Funktionen gehören:</p>
-  <ul>
-    <li>Anpassung von Kontrast, Schriftgröße und -art, Zeilenabstand und Ausrichtung</li>
-    <li>Kompatibilität mit Screenreadern (JAWS, NVDA, VoiceOver, TalkBack)</li>
-    <li>Tastaturnavigation mit Unterstützung für Tab, Shift+Tab, Enter, Esc usw.</li>
-    <li>Spezifische Profile für Epilepsie, Sehbehinderungen, kognitive Einschränkungen, ADHS, blinde Nutzer und motorische Beeinträchtigungen</li>
-    <li>Vereinfachte Aktivierung barrierefreier Modi (z. B. mit der Tastenkombination Alt+1)</li>
-  </ul>
-
-  <h2>Kompatibilität mit Browsern und Hilfstechnologien</h2>
-  <p>Die Website ist für die Nutzung mit allen gängigen Browsern (Chrome, Firefox, Safari, Edge, Opera) und Betriebssystemen – sowohl auf Desktop- als auch auf Mobilgeräten – konzipiert. Sie ist mit den gängigsten Hilfstechnologien kompatibel.</p>
-
-  <h2>Nicht barrierefreie Inhalte</h2>
-  <p>Trotz kontinuierlicher Bemühungen können einige Bereiche der Website nicht vollständig barrierefrei sein, darunter:</p>
-  <ul>
-    <li>Unzureichender Farbkontrast in bestimmten Bereichen</li>
-    <li>Textabstände, die in Einzelfällen die Lesbarkeit beeinträchtigen können</li>
-    <li>Rollen und Zustände einiger Elemente sind nicht immer korrekt definiert</li>
-    <li>Statusmeldungen werden nicht immer von Screenreadern erkannt</li>
-  </ul>
-
-  <h2>Rechtsgrundlagen</h2>
-  <ul>
-    <li><strong>Gesetz vom 9. Januar 2004, Nr. 4</strong> ("Stanca-Gesetz") über die Barrierefreiheit von Websites</li>
-    <li><strong>EU-Richtlinie 2019/882</strong>: verpflichtet zur digitalen Barrierefreiheit ab 2025</li>
-    <li><strong>UNI CEI EN 301549</strong>: technische Norm für IKT-Barrierefreiheit</li>
-  </ul>
-
-  <h2>Feedback und Kontakt</h2>
-  <p>Wenn Sie Barrierefreiheitsprobleme feststellen oder uns auf Schwierigkeiten hinweisen möchten, kontaktieren Sie uns bitte per E-Mail unter: <a href="mailto:${siteMail}">${siteMail}</a>.</p>
-
-  <p><em>Obwohl wir uns ständig bemühen, ein Höchstmaß an Barrierefreiheit zu gewährleisten, können einige Abschnitte der Website nicht vollständig konform sein. Wir arbeiten kontinuierlich an der Verbesserung der Nutzererfahrung für alle.</em></p>
-
-  <h2>Erstellung der Erklärung</h2>
-  <p>Diese Erklärung wurde von <strong>${siteTitle}</strong> am <strong>04.03.2024</strong> anhand automatisierter Tests erstellt.</p>
-</div>`,
-    fontSize_tooltip: "Ändert die Textgröße zur besseren Lesbarkeit.",
-    letterSpacing_tooltip: "Erhöht den Abstand zwischen Buchstaben für bessere Lesbarkeit.",
-    lineHeight_tooltip: "Erhöht den Zeilenabstand zur Verringerung visueller Ermüdung.",
-    textAlign_tooltip: "Legt die Textausrichtung fest: Hilfreich bei kognitiven Beeinträchtigungen.",
-    readableFont_tooltip: "Verwendet eine gut lesbare Schriftart (z. B. Arial).",
-    contrastHighe_tooltip: "Aktiviert hohen Kontrast für sehbehinderte Nutzer.",
-    contrastLow_tooltip: "Erhöht leicht den Kontrast für ein entspannteres Seherlebnis.",
-    monochrome_tooltip: "Deaktiviert Farben zur Reduzierung von Ablenkungen oder neurologischen Reizen.",
-    sepiaTone_tooltip: "Wendet einen Sepia-Ton für ein wärmeres Erscheinungsbild an.",
-    nightMode_tooltip: "Dunkelmodus: ideal bei Lichtempfindlichkeit.",
-    screenReader_tooltip: "Fügt ARIA-Attribute hinzu zur besseren Unterstützung von Screenreadern.",
-    supp_title: "Barrierefreiheitshilfe",
-    keyboardNav_tooltip: "Hebt den Tastaturfokus hervor: Nützlich ohne Maus.",
-    dynamicContentPause_tooltip: "Deaktiviert Animationen: Hilfreich bei Schwindel oder kognitiven Problemen.",
-    orient_title: "Orientierung",
-    highlightHover_tooltip: "Hebt Elemente beim Darüberfahren mit der Maus hervor.",
-    hideImages_tooltip: "Blendet Bilder aus – hilfreich für Konzentration oder bei kognitiven Problemen.",
-    largeCursor_tooltip: "Vergrößert den Mauszeiger für Menschen mit Seh- oder Bewegungsbeeinträchtigungen.",
-    readingMask_tooltip: "Fügt eine Lesemaske hinzu, die dem Mauszeiger folgt und beim Konzentrieren hilft.",
-    mod_col_title: "Farbmodi"
-  },
-  es: {
-    resetBtn: "Restablecer ajustes",
-    scaleContents: "Escalar contenido",
-    pageScaleLabel: "Escala de la página",
-    fontSize: "Tamaño del texto",
-    letterSpacing: "Espaciado entre letras",
-    lineHeight: "Altura de línea",
-    textAlign: "Alineación del texto",
-    textAlignA: "Por defecto",
-    textAlignleft: "Izquierda",
-    textAligncenter: "Centro",
-    textAlignright: "Derecha",
-    readableFont: "Fuente legible",
-    contrastHigh: "Alto contraste",
-    contrastLow: "Bajo contraste",
-    monochrome: "Monocromático",
-    sepiaTone: "Tono sepia",
-    nightMode: "Modo nocturno",
-    screenReader: "Compatibilidad con lector de pantalla",
-    keyboardNav: "Navegación por teclado",
-    dynamicContentPause: "Pausar contenido dinámico",
-    highlightHover: "Resaltar al pasar el cursor",
-    hideImages: "Ocultar imágenes",
-    largeCursor: "Cursor grande",
-    readingMask: "Máscara de lectura",
-    scaleContents_tooltip: "Amplía toda la página para facilitar la lectura.",
-    complianceBtn: "Declaración de conformidad",
-    complianceTitle: "Declaración de conformidad",
-    complianceStatus: "Estado: Parcialmente conforme",
-    mod_contenuti_title: "Contenido",
-    complianceDescription: `<div>
-  <h2>Estado de conformidad</h2>
-  <p>Creemos que la web debe ser accesible para todos, independientemente de sus capacidades. Por eso, nos comprometemos a hacer este sitio conforme a las pautas WCAG 2.1 nivel AA, según la norma UNI CEI EN 301549 y la Directiva (UE) 2019/882.</p>
-
-  <h2>Tecnologías y funcionalidades de apoyo</h2>
-  <p>El sitio utiliza herramientas que permiten a cada usuario personalizar la interfaz según sus necesidades. Estas funcionalidades incluyen:</p>
-  <ul>
-    <li>Ajuste de contraste, tamaño y tipo de fuente, espaciado y alineación</li>
-    <li>Compatibilidad con lectores de pantalla (JAWS, NVDA, VoiceOver, TalkBack)</li>
-    <li>Navegación por teclado con soporte para Tab, Shift+Tab, Enter, Esc, etc.</li>
-    <li>Perfiles específicos para epilepsia, baja visión, discapacidades cognitivas, TDAH, usuarios ciegos y discapacidades motoras</li>
-    <li>Activación simplificada de modos accesibles (por ejemplo, con la combinación de teclas Alt+1)</li>
-  </ul>
-
-  <h2>Compatibilidad con navegadores y tecnologías de asistencia</h2>
-  <p>El sitio está diseñado para funcionar con los principales navegadores (Chrome, Firefox, Safari, Edge, Opera) y sistemas operativos, tanto en ordenadores de escritorio como en dispositivos móviles. Es compatible con las tecnologías de asistencia más utilizadas.</p>
-
-  <h2>Contenido no accesible</h2>
-  <p>A pesar de nuestros esfuerzos continuos, algunas partes del sitio pueden no ser completamente accesibles, como por ejemplo:</p>
-  <ul>
-    <li>Contraste de color insuficiente en algunas áreas</li>
-    <li>Espaciado del texto que puede dificultar la legibilidad en ciertos casos</li>
-    <li>Roles y estados de algunos elementos no siempre correctamente definidos</li>
-    <li>Mensajes de estado no siempre detectados por los lectores de pantalla</li>
-  </ul>
-
-  <h2>Normativa aplicable</h2>
-  <ul>
-    <li><strong>Ley 9 de enero de 2004, n.º 4</strong> ("Ley Stanca") sobre accesibilidad web</li>
-    <li><strong>Directiva (UE) 2019/882</strong>: obliga a la accesibilidad de los servicios digitales a partir de 2025</li>
-    <li><strong>UNI CEI EN 301549</strong>: norma técnica de referencia para la accesibilidad TIC</li>
-  </ul>
-
-  <h2>Sugerencias y contacto</h2>
-  <p>Si encuentras problemas de accesibilidad o deseas comunicar alguna dificultad, puedes escribirnos al correo electrónico: <a href="mailto:${siteMail}">${siteMail}</a>.</p>
-
-  <p><em>A pesar de nuestro constante compromiso con la accesibilidad, algunas secciones del sitio podrían no ser totalmente conformes. Seguimos trabajando para mejorar la experiencia de todos los usuarios.</em></p>
-
-  <h2>Redacción de la declaración</h2>
-  <p>Esta declaración ha sido redactada por <strong>${siteTitle}</strong> el <strong>04/03/2024</strong>, mediante pruebas automáticas.</p>
-</div>
-`,
-    fontSize_tooltip: "Modifica el tamaño del texto para mejorar su legibilidad.",
-    letterSpacing_tooltip: "Aumenta el espaciado entre letras para mayor claridad.",
-    lineHeight_tooltip: "Aumenta el interlineado para reducir la fatiga visual.",
-    textAlign_tooltip: "Configura la alineación del texto: útil para personas con dificultades cognitivas.",
-    readableFont_tooltip: "Aplica una fuente de alta legibilidad (como Arial).",
-    contrastHighe_tooltip: "Activa un alto contraste para personas con baja visión.",
-    contrastLow_tooltip: "Aumenta ligeramente el contraste para una visualización más cómoda.",
-    monochrome_tooltip: "Desactiva los colores para reducir distracciones o molestias neurológicas.",
-    sepiaTone_tooltip: "Aplica un tono sepia para una experiencia visual más cálida.",
-    nightMode_tooltip: "Modo oscuro: ideal para personas con sensibilidad a la luz.",
-    screenReader_tooltip: "Añade atributos ARIA para mejorar la accesibilidad con lectores de pantalla.",
-    supp_title: "Soporte de accesibilidad",
-    keyboardNav_tooltip: "Destaca el enfoque del teclado: útil si no se usa ratón.",
-    dynamicContentPause_tooltip: "Desactiva animaciones: útil para personas con vértigo o dificultades cognitivas.",
-    orient_title: "Orientación",
-    highlightHover_tooltip: "Resalta elementos al pasar el cursor por encima.",
-    hideImages_tooltip: "Oculta las imágenes, útil para concentración o dificultades cognitivas.",
-    largeCursor_tooltip: "Aumenta el tamaño del cursor para personas con dificultades visuales o motoras.",
-    readingMask_tooltip: "Añade una máscara de lectura que sigue al cursor para ayudar a concentrarse.",
-    mod_col_title: "Modos de color"
   }
 };
 
