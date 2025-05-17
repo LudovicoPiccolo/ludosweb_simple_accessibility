@@ -8,6 +8,13 @@
 const userLang = (window.accessibility_var?.lang || accessibility_var?.lang) || 'it';
 const siteTitle = (window.accessibility_var?.title || accessibility_var?.title) || 'Sito generico';
 const siteMail = (window.accessibility_var?.mail || accessibility_var?.mail) || 'info@example.com';
+const siteDate = (window.accessibility_var?.data || accessibility_var?.data) 
+  ? new Date(window.accessibility_var?.data || accessibility_var?.data).toLocaleDateString('it-IT', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    }) 
+  : '25/06/2025';
 
 export const i18n = {
   it: {
@@ -57,13 +64,14 @@ export const i18n = {
   <p>Il sito è progettato per funzionare con i principali browser (Chrome, Firefox, Safari, Edge, Opera) e sistemi operativi, sia su desktop che dispositivi mobili. È compatibile con le tecnologie assistive più utilizzate.</p>
 
   <h2>Contenuti non accessibili</h2>
-  <p>Nonostante l’impegno continuo, alcune parti del sito potrebbero non essere pienamente conformi, tra cui:</p>
+  <p>Nonostante l’impegno continuo per garantire la massima accessibilità, alcune parti del sito potrebbero non essere pienamente conformi ai requisiti previsti. In particolare:</p>
   <ul>
-    <li>Contrasto colore non sufficiente in alcune aree</li>
-    <li>Spaziatura del testo che può compromettere la leggibilità in casi specifici</li>
-    <li>Ruoli e stati di alcuni elementi non sempre esplicitati correttamente</li>
-    <li>Messaggi di stato non sempre rilevati dai lettori di schermo</li>
+    <li>Contrasti di colore insufficienti in alcune sezioni</li>
+    <li>Spaziature del testo non sempre ottimali per la leggibilità</li>
+    <li>Ruoli e stati di alcuni elementi dell’interfaccia non sempre definiti correttamente</li>
+    <li>Messaggi di stato non sempre percepibili dai lettori di schermo</li>
   </ul>
+  <p>Queste criticità sono oggetto di monitoraggio e verranno progressivamente risolte nei prossimi aggiornamenti del sito.</p>
 
   <h2>Normativa di riferimento</h2>
   <ul>
@@ -76,9 +84,11 @@ export const i18n = {
   <p>Se riscontri problemi di accessibilità o desideri segnalarci delle difficoltà, puoi contattarci via email all’indirizzo: <a href="mailto:${siteMail}">${siteMail}</a>.</p>
 
   <p><em>Nonostante l'impegno costante per garantire la massima accessibilità, alcune sezioni del sito potrebbero risultare non pienamente conformi. Continuiamo a lavorare per migliorare l’esperienza per tutti gli utenti.</em></p>
+
   <h2>Redazione della dichiarazione</h2>
-  <p>La presente dichiarazione è stata redatta da <strong>${siteTitle}</strong> in data <strong>04/03/2024</strong>, tramite test automatici.</p>
-  </div>`,
+  <p>La presente dichiarazione è stata redatta da <strong>${siteTitle}</strong> in data <strong>${siteDate}</strong>, mediante test automatici e verifica interna.</p>
+</div>
+`,
     fontSize_tooltip: "Modifica la dimensione del testo per migliorare la leggibilità.",
     letterSpacing_tooltip: "Aumenta la spaziatura tra le lettere per rendere il testo più chiaro.",
     lineHeight_tooltip: "Aumenta l’interlinea per ridurre l’affaticamento visivo.",
@@ -131,45 +141,47 @@ export const i18n = {
     complianceStatus: "Status: Partially compliant",
     mod_contenuti_title: "Contents",
     complianceDescription: `<div>
-  <p>We believe that the web should be accessible to everyone, regardless of their abilities. For this reason, we are committed to making this site compliant with WCAG 2.1 Level AA guidelines, in accordance with the UNI CEI EN 301549 standard and the EU Directive 2019/882.</p>
+  <p>We believe the web should be accessible to everyone, regardless of individual abilities. For this reason, we are committed to making this website compliant with WCAG 2.1 Level AA guidelines, in accordance with the UNI CEI EN 301549 standard and Directive (EU) 2019/882.</p>
 
-  <h2>Supporting Technologies and Features</h2>
-  <p>The site uses tools that allow each user to customize the interface according to their needs. These features include:</p>
+  <h2>Supported Technologies and Accessibility Features</h2>
+  <p>The site includes tools that allow each user to customize the interface according to their needs. These features include:</p>
   <ul>
     <li>Adjustment of contrast, font size and type, spacing, and alignment</li>
     <li>Compatibility with screen readers (JAWS, NVDA, VoiceOver, TalkBack)</li>
-    <li>Keyboard navigation support for Tab, Shift+Tab, Enter, Esc, etc.</li>
-    <li>Specific profiles for epilepsy, low vision, cognitive disabilities, ADHD, blind users, and motor disabilities</li>
-    <li>Simplified activation of accessible modes (e.g., via Alt+1 key combination)</li>
+    <li>Keyboard navigation support (Tab, Shift+Tab, Enter, Esc, etc.)</li>
+    <li>Accessibility profiles for epilepsy, low vision, cognitive disabilities, ADHD, blindness, and motor impairments</li>
+    <li>Quick activation of accessibility modes (e.g., using the Alt+1 keyboard shortcut)</li>
   </ul>
 
   <h2>Browser and Assistive Technology Compatibility</h2>
-  <p>The site is designed to work with major browsers (Chrome, Firefox, Safari, Edge, Opera) and operating systems, both on desktop and mobile devices. It is compatible with the most commonly used assistive technologies.</p>
+  <p>The site is designed to work with major browsers (Chrome, Firefox, Safari, Edge, Opera) and operating systems, on both desktop and mobile devices. It is compatible with widely used assistive technologies.</p>
 
   <h2>Non-accessible Content</h2>
-  <p>Despite our ongoing efforts, some parts of the site may not be fully compliant, including:</p>
+  <p>Despite ongoing efforts to ensure full accessibility, some parts of the site may not fully comply with all accessibility requirements. Specifically:</p>
   <ul>
     <li>Insufficient color contrast in some areas</li>
     <li>Text spacing that may affect readability in specific cases</li>
-    <li>Roles and states of some elements not always properly defined</li>
+    <li>Interface elements with roles and states not always properly defined</li>
     <li>Status messages not always detected by screen readers</li>
   </ul>
+  <p>These issues are being monitored and will be progressively addressed in future updates.</p>
 
-  <h2>Relevant Legislation</h2>
+  <h2>Reference Standards</h2>
   <ul>
-    <li><strong>Law No. 4 of January 9, 2004</strong> ("Stanca Law") on web accessibility</li>
-    <li><strong>EU Directive 2019/882</strong>: mandates digital services accessibility from 2025</li>
+    <li><strong>Italian Law No. 4 of January 9, 2004</strong> ("Stanca Law") on web accessibility</li>
+    <li><strong>Directive (EU) 2019/882</strong>: mandates accessibility for digital services by 2025</li>
     <li><strong>UNI CEI EN 301549</strong>: technical standard for ICT accessibility</li>
   </ul>
 
   <h2>Feedback and Contact</h2>
-  <p>If you experience accessibility issues or wish to report difficulties, you can contact us via email at: <a href="mailto:${siteMail}">${siteMail}</a>.</p>
+  <p>If you encounter any accessibility issues or would like to report a problem, please contact us by email at: <a href="mailto:${siteMail}">${siteMail}</a>.</p>
 
-  <p><em>Despite our constant efforts to ensure maximum accessibility, some sections of the site may not be fully compliant. We continue to work to improve the experience for all users.</em></p>
+  <p><em>Despite our ongoing commitment to ensuring the highest level of accessibility, some sections of the site may not yet be fully compliant. We continue to work to improve the experience for all users.</em></p>
 
-  <h2>Statement Drafting</h2>
-  <p>This statement was drafted by <strong>${siteTitle}</strong> on <strong>03/04/2024</strong>, using automated testing tools.</p>
-</div>`,
+  <h2>Declaration Drafting</h2>
+  <p>This declaration was prepared by <strong>${siteTitle}</strong> on <strong>${siteDate}</strong>, based on automated testing and internal review.</p>
+</div>
+`,
     fontSize_tooltip: "Adjusts the text size to improve readability.",
     letterSpacing_tooltip: "Increases letter spacing to make text clearer.",
     lineHeight_tooltip: "Increases line spacing to reduce visual fatigue.",
@@ -222,45 +234,47 @@ export const i18n = {
     complianceStatus: "État : Partiellement conforme",
     mod_contenuti_title: "Contenu",
     complianceDescription: `<div>
-  <p>Nous croyons que le web doit être accessible à tous, quelles que soient leurs capacités. C’est pourquoi nous nous engageons à rendre ce site conforme aux directives WCAG 2.1 niveau AA, conformément à la norme UNI CEI EN 301549 et à la Directive (UE) 2019/882.</p>
+  <p>Nous pensons que le web doit être accessible à tous, quelles que soient leurs capacités. C’est pourquoi nous nous engageons à rendre ce site conforme aux directives WCAG 2.1 niveau AA, conformément à la norme UNI CEI EN 301549 et à la Directive (UE) 2019/882.</p>
 
-  <h2>Technologies et fonctionnalités d'assistance</h2>
-  <p>Le site utilise des outils permettant à chaque utilisateur de personnaliser l’interface selon ses besoins. Ces fonctionnalités incluent :</p>
+  <h2>Technologies et fonctionnalités d’assistance</h2>
+  <p>Ce site utilise des outils permettant à chaque utilisateur de personnaliser l’interface selon ses besoins. Ces fonctionnalités incluent :</p>
   <ul>
-    <li>Adaptation du contraste, de la taille et du type de police, de l’espacement et de l’alignement</li>
+    <li>Ajustement du contraste, de la taille et du type de police, de l’espacement et de l’alignement</li>
     <li>Compatibilité avec les lecteurs d’écran (JAWS, NVDA, VoiceOver, TalkBack)</li>
-    <li>Navigation au clavier avec prise en charge des touches Tab, Maj+Tab, Entrée, Échap, etc.</li>
-    <li>Profils spécifiques pour l’épilepsie, la basse vision, les troubles cognitifs, le TDAH, les utilisateurs aveugles et les handicaps moteurs</li>
-    <li>Activation simplifiée des modes accessibles (par exemple avec la combinaison de touches Alt+1)</li>
+    <li>Navigation au clavier (Tab, Maj+Tab, Entrée, Échap, etc.)</li>
+    <li>Profils d’accessibilité pour l’épilepsie, la basse vision, les troubles cognitifs, le TDAH, la cécité et les handicaps moteurs</li>
+    <li>Activation rapide des modes accessibles (par exemple avec la combinaison de touches Alt+1)</li>
   </ul>
 
   <h2>Compatibilité avec les navigateurs et technologies d’assistance</h2>
-  <p>Le site est conçu pour fonctionner avec les principaux navigateurs (Chrome, Firefox, Safari, Edge, Opera) et systèmes d’exploitation, sur ordinateur comme sur mobile. Il est compatible avec les technologies d’assistance les plus utilisées.</p>
+  <p>Ce site est conçu pour fonctionner avec les principaux navigateurs (Chrome, Firefox, Safari, Edge, Opera) et systèmes d’exploitation, sur ordinateurs et appareils mobiles. Il est compatible avec les technologies d’assistance les plus courantes.</p>
 
   <h2>Contenus non accessibles</h2>
-  <p>Malgré nos efforts constants, certaines parties du site peuvent ne pas être totalement conformes, notamment :</p>
+  <p>Malgré nos efforts constants pour assurer une accessibilité maximale, certaines parties du site peuvent ne pas être entièrement conformes. Notamment :</p>
   <ul>
-    <li>Contraste de couleurs insuffisant dans certaines zones</li>
+    <li>Contraste de couleurs insuffisant dans certaines sections</li>
     <li>Espacement du texte pouvant nuire à la lisibilité dans certains cas</li>
-    <li>Rôles et états de certains éléments pas toujours correctement définis</li>
-    <li>Messages d'état non toujours détectés par les lecteurs d’écran</li>
+    <li>Rôles et états de certains éléments de l’interface non toujours correctement définis</li>
+    <li>Messages d’état non toujours détectés par les lecteurs d’écran</li>
   </ul>
+  <p>Ces éléments sont en cours de surveillance et seront progressivement corrigés dans les prochaines mises à jour.</p>
 
-  <h2>Législation de référence</h2>
+  <h2>Normes de référence</h2>
   <ul>
-    <li><strong>Loi du 9 janvier 2004, n°4</strong> ("Loi Stanca") sur l’accessibilité des sites web</li>
-    <li><strong>Directive (UE) 2019/882</strong> : impose l’accessibilité des services numériques à partir de 2025</li>
-    <li><strong>UNI CEI EN 301549</strong> : norme technique de référence pour l’accessibilité des TIC</li>
+    <li><strong>Loi italienne n° 4 du 9 janvier 2004</strong> (« Loi Stanca ») sur l’accessibilité des sites web</li>
+    <li><strong>Directive (UE) 2019/882</strong> : rend l’accessibilité obligatoire pour les services numériques à partir de 2025</li>
+    <li><strong>UNI CEI EN 301549</strong> : norme technique pour l’accessibilité des TIC</li>
   </ul>
 
-  <h2>Signalements et contacts</h2>
-  <p>Si vous rencontrez des problèmes d’accessibilité ou souhaitez nous signaler des difficultés, vous pouvez nous contacter par email à : <a href="mailto:${siteMail}">${siteMail}</a>.</p>
+  <h2>Contact et signalement</h2>
+  <p>Si vous rencontrez des problèmes d’accessibilité ou souhaitez nous faire part de difficultés, vous pouvez nous contacter par e-mail à l’adresse suivante : <a href="mailto:${siteMail}">${siteMail}</a>.</p>
 
-  <p><em>Malgré notre engagement constant à garantir une accessibilité maximale, certaines sections du site peuvent ne pas être entièrement conformes. Nous continuons à travailler pour améliorer l’expérience de tous les utilisateurs.</em></p>
+  <p><em>Malgré notre engagement continu en faveur de l’accessibilité, certaines sections du site peuvent ne pas encore être totalement conformes. Nous poursuivons nos efforts pour améliorer l’expérience pour tous les utilisateurs.</em></p>
 
   <h2>Rédaction de la déclaration</h2>
-  <p>La présente déclaration a été rédigée par <strong>${siteTitle}</strong> le <strong>04/03/2024</strong>, à l’aide de tests automatiques.</p>
-</div>`,
+  <p>La présente déclaration a été rédigée par <strong>${siteTitle}</strong> en date du <strong>${siteDate}</strong>, à l’aide de tests automatiques et d’une vérification interne.</p>
+</div>
+`,
     fontSize_tooltip: "Modifie la taille du texte pour améliorer la lisibilité.",
     letterSpacing_tooltip: "Augmente l’espacement entre les lettres pour rendre le texte plus lisible.",
     lineHeight_tooltip: "Augmente l’interligne pour réduire la fatigue visuelle.",

@@ -97,19 +97,7 @@ export const panelTemplate = `<div id="lw-a-accessibility-btn" class="lw-a-acces
   <span class="tooltip-content" data-i18n="lineHeight_tooltip"></span>
 </label>
 
-<label class="label-tooltip">
-  
-  <span data-i18n="textAlign"></span>
-  <div class="lw-a-select-wrapper">
-    <select id="textAlign" class="lw-a-accessible-select">
-      <option value="" data-i18n="textAlignA"></option>
-      <option value="left" data-i18n="textAlignleft"></option>
-      <option value="center" data-i18n="textAligncenter"></option>
-      <option value="right" data-i18n="textAlignright"></option>
-    </select>
-  </div>
-  <span class="tooltip-content" data-i18n="textAlign_tooltip"></span>
-</label>
+
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">

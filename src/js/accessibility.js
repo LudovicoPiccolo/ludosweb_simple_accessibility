@@ -61,6 +61,38 @@ export function applyFontScaling(baseSizePx) {
       });
 }
 
+
+function disableInlineColor() {
+  // Trova tutti gli elementi con un attributo "style"
+  const elementsWithStyle = document.querySelectorAll('[style]');
+
+  elementsWithStyle.forEach(el => {
+    // Controlla se lo stile contiene "color"
+    const colorValue = el.style.color;
+    if (colorValue) {
+      // Salva il valore originale in un dataset personalizzato
+      el.dataset.originalColor = colorValue;
+
+      // Rimuovi temporaneamente il colore
+      el.style.color = '';
+    }
+  });
+}
+
+function restoreInlineColor() {
+  // Trova tutti gli elementi che hanno un dataset "originalColor"
+  const elementsWithOriginalColor = document.querySelectorAll('[data-original-color]');
+
+  elementsWithOriginalColor.forEach(el => {
+    // Ripristina il colore originale
+    el.style.color = el.dataset.originalColor;
+
+    // Rimuovi il dataset
+    delete el.dataset.originalColor;
+  });
+}
+
+
 export function applyAccessibility(elements) {
     const html = document.documentElement;
     const body = document.body;
@@ -124,6 +156,7 @@ export function applyAccessibility(elements) {
     
     if (activeButton) {
         body.classList.add(activeButton.id); // Usa l'ID del pulsante come classe
+        disableInlineColor();
     }
 
 
@@ -133,19 +166,16 @@ export function applyAccessibility(elements) {
     // Scale
     const scaleValue = elements.pageScale.value;
     if (scaleValue !== "100") {
-        document.documentElement.style.zoom = scaleValue + '%';
+        document.body.style.zoom = scaleValue + '%';
     } else {
-        document.documentElement.style.removeProperty('zoom');
+        document.body.style.removeProperty('zoom');
     }
 
     // Screen reader ARIA
     if (elements.screenReader.checked) {
-        const currentLang = document.getElementById('languageSelect').value || 'it';
-        html.setAttribute("lang", currentLang);
         html.setAttribute("role", "document");
         html.setAttribute("aria-label", "Contenuto principale della pagina");
     } else {
-        html.removeAttribute("lang");
         html.removeAttribute("role");
         html.removeAttribute("aria-label");
     }
@@ -237,7 +267,7 @@ export function resetAccessibility(elements) {
         
         document.body.style.removeProperty('transform');
         document.body.style.removeProperty('transform-origin');
-        document.documentElement.style.removeProperty('zoom');
+        document.body.style.removeProperty('zoom');
         
         const activeButtons = document.querySelectorAll('.mode-btn.active');
         activeButtons.forEach(button => {
@@ -268,7 +298,7 @@ export function resetAccessibility(elements) {
             el.value = el.defaultValue;
           }
         });
-        
+        restoreInlineColor();
         document.getElementById("lw-a-accessibility-btn").classList.remove("accessibility-active");
 }
 
