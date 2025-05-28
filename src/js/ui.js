@@ -4,7 +4,7 @@
  * Organization: Ludosweb
  * Description: UI initialization and management for accessibility features.
  */
-import { i18n, userLang } from './i18n';
+import { lw_i18n, userLang } from './lw_i18n';
 import { applyAccessibility, resetAccessibility } from './accessibility';
 import { loadSettings, saveSettings } from './settings';
 
@@ -27,11 +27,11 @@ export function initUI(elements) {
     }
     }, 100);
     
-    const langPack = i18n[userLang] || i18n['it'];
+    const langPack = lw_i18n[userLang] || lw_i18n['it'];
 
-  document.querySelectorAll("[data-i18n]").forEach(elem => {
-    const key = elem.getAttribute("data-i18n");
-    const value = langPack[key] || window.i18nAccessibility['it'][key];
+  document.querySelectorAll("[data-lw_i18n]").forEach(elem => {
+    const key = elem.getAttribute("data-lw_i18n");
+    const value = langPack[key] || window.lw_i18nAccessibility['it'][key];
     if (value) {
       if (key === 'complianceDescription') {
         elem.innerHTML = value; 

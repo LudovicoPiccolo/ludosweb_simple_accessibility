@@ -2,21 +2,21 @@
  * Accessibility Ludosweb Project
  * Author: Piccolo Ludovico
  * Organization: Ludosweb
- * Description: Internationalization (i18n) strings and language management for accessibility features.
+ * Description: Internationalization (lw_i18n) strings and language management for accessibility features.
  */
 
-const userLang = (window.accessibility_var?.lang || accessibility_var?.lang) || 'it';
-const siteTitle = (window.accessibility_var?.title || accessibility_var?.title) || 'Sito generico';
-const siteMail = (window.accessibility_var?.mail || accessibility_var?.mail) || 'info@example.com';
-const siteDate = (window.accessibility_var?.data || accessibility_var?.data) 
-  ? new Date(window.accessibility_var?.data || accessibility_var?.data).toLocaleDateString('it-IT', {
+const userLang = (window.lw_accessibility_var?.lang || lw_accessibility_var?.lang) || 'it';
+const siteTitle = (window.lw_accessibility_var?.title || lw_accessibility_var?.title) || 'Sito generico';
+const siteMail = (window.lw_accessibility_var?.mail || lw_accessibility_var?.mail) || 'info@example.com';
+const siteDate = (window.lw_accessibility_var?.data || lw_accessibility_var?.data) 
+  ? new Date(window.lw_accessibility_var?.data || lw_accessibility_var?.data).toLocaleDateString('it-IT', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric'
     }) 
   : '25/06/2025';
 
-export const i18n = {
+export const lw_i18n = {
   it: {
     resetBtn: "Ripristina impostazioni",
     scaleContents: "Scala i contenuti",

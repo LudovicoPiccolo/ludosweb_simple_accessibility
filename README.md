@@ -47,7 +47,7 @@ npm run dev
 ```html
 <link href="accessibility.css" rel="stylesheet">
 <script>
- const accessibility_var = {
+ const lw_accessibility_var = {
     lang: 'it', // it, en, fr, de, es
     title: 'Your website name',
     mail: 'info@yoursite.com'
@@ -128,7 +128,7 @@ npm run dev
 ```html
 <link href="accessibility.css" rel="stylesheet">
 <script>
-  const accessibility_var = {
+  const lw_accessibility_var = {
     lang: 'it', // it, en, fr, de, es
     title: 'Nome del tuo sito',
     mail: 'info@iltuosito.com'

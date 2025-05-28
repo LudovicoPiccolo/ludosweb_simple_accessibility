@@ -21,7 +21,7 @@ export const panelTemplate = `<div id="lw-a-accessibility-btn" class="lw-a-acces
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
     <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
   </svg>
-  <span data-i18n="resetBtn"></span>
+  <span data-lw_i18n="resetBtn"></span>
 </button>
 
 <!-- Select per cambio lingua -->
@@ -37,64 +37,64 @@ export const panelTemplate = `<div id="lw-a-accessibility-btn" class="lw-a-acces
 
 <label class="label-tooltip">
   
-  <span data-i18n="textAlign" ></span>
+  <span data-lw_i18n="textAlign" ></span>
   <div class="lw-a-select-wrapper">
     <select id="textAlign" class="lw-a-accessible-select">
-      <option value="" data-i18n="textAlignA"></option>
-      <option value="left" data-i18n="textAlignleft"></option>
-      <option value="center" data-i18n="textAligncenter"></option>
-      <option value="right" data-i18n="textAlignright"></option>
+      <option value="" data-lw_i18n="textAlignA"></option>
+      <option value="left" data-lw_i18n="textAlignleft"></option>
+      <option value="center" data-lw_i18n="textAligncenter"></option>
+      <option value="right" data-lw_i18n="textAlignright"></option>
     </select>
   </div>
-  <span class="tooltip-content" data-i18n="textAlign_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="textAlign_tooltip"></span>
 </label>
 
 
 
-<h4 data-i18n="mod_contenuti_title"></h4>
+<h4 data-lw_i18n="mod_contenuti_title"></h4>
 
 <label class="label-tooltip">
-<span data-i18n="scaleContents"></span>
+<span data-lw_i18n="scaleContents"></span>
   <div class="scale-controls">
     <button class="scale-btn" id="decreaseScale">-</button>
     <span id="scaleValue">100%</span>
     <button class="scale-btn" id="increaseScale">+</button>
     <input type="range" id="pageScale" min="90" max="110" step="5" value="100" style="display: none;">
   </div>
-  <span class="tooltip-content" data-i18n="scaleContents_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="scaleContents_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <span data-i18n="fontSize"></span>
+  <span data-lw_i18n="fontSize"></span>
   <div class="scale-controls">
     <button class="scale-btn" id="decreaseFontSize">-</button>
     <span id="fontSizeValue">100%</span>
     <button class="scale-btn" id="increaseFontSize">+</button>
     <input type="range" id="fontSize" min="90" max="300" step="10" value="100" style="display: none;">
   </div>
-  <span class="tooltip-content" data-i18n="fontSize_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="fontSize_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <span data-i18n="letterSpacing"></span>
+  <span data-lw_i18n="letterSpacing"></span>
   <div class="scale-controls">
     <button class="scale-btn" id="decreaseLetterSpacing">-</button>
     <span id="letterSpacingValue">0</span>
     <button class="scale-btn" id="increaseLetterSpacing">+</button>
     <input type="range" id="letterSpacing" min="0" max="10" step="0.5" value="0" style="display: none;">
   </div>
-  <span class="tooltip-content" data-i18n="letterSpacing_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="letterSpacing_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
-  <span data-i18n="lineHeight"></span>
+  <span data-lw_i18n="lineHeight"></span>
   <div class="scale-controls">
     <button class="scale-btn" id="decreaseLineHeight">-</button>
     <span id="lineHeightValue">1.5</span>
     <button class="scale-btn" id="increaseLineHeight">+</button>
     <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.5" style="display: none;">
   </div>
-  <span class="tooltip-content" data-i18n="lineHeight_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="lineHeight_tooltip"></span>
 </label>
 
 
@@ -102,109 +102,109 @@ export const panelTemplate = `<div id="lw-a-accessibility-btn" class="lw-a-acces
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="readableFont" class="accessible-checkbox"> 
-    <span data-i18n="readableFont"></span>
+    <span data-lw_i18n="readableFont"></span>
   </div>
-  <span class="tooltip-content" data-i18n="readableFont_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="readableFont_tooltip"></span>
 </label>
 
-<h4 data-i18n="mod_col_title"></h4>
+<h4 data-lw_i18n="mod_col_title"></h4>
 
 <div class="mode-buttons">
   <button class="mode-btn" id="contrastHigh">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8v16z"/>
     </svg>
-    <span data-i18n="contrastHigh"></span>
+    <span data-lw_i18n="contrastHigh"></span>
   </button>
   <button class="mode-btn" id="contrastLow">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10V2z"/>
     </svg>
-    <span data-i18n="contrastLow"></span>
+    <span data-lw_i18n="contrastLow"></span>
   </button>
   <button class="mode-btn" id="monochrome">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10H12V2z"/>
     </svg>
-    <span data-i18n="monochrome"></span>
+    <span data-lw_i18n="monochrome"></span>
   </button>
   <button class="mode-btn" id="sepiaTone">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10H12V2z"/>
     </svg>
-    <span data-i18n="sepiaTone"></span>
+    <span data-lw_i18n="sepiaTone"></span>
   </button>
   <button class="mode-btn" id="nightMode">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
       <path d="M9.37 5.51C10.19 3.93 11.99 3 14 3c3.87 0 7 3.13 7 7 0 2.01-.93 3.81-2.51 4.63C17.99 18.87 15.13 21 12 21c-3.87 0-7-3.13-7-7 0-3.13 2.13-5.99 4.37-7.49z"/>
     </svg>
-    <span data-i18n="nightMode"></span>
+    <span data-lw_i18n="nightMode"></span>
   </button>
 </div>
 
-<h4 data-i18n="supp_title"></h4>
+<h4 data-lw_i18n="supp_title"></h4>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="screenReader" class="accessible-checkbox">
-    <span data-i18n="screenReader"></span>
+    <span data-lw_i18n="screenReader"></span>
   </div>
-  <span class="tooltip-content" data-i18n="screenReader_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="screenReader_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="keyboardNav" class="accessible-checkbox">
-    <span data-i18n="keyboardNav"></span>
+    <span data-lw_i18n="keyboardNav"></span>
   </div>
-  <span class="tooltip-content" data-i18n="keyboardNav_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="keyboardNav_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="dynamicContentPause" class="accessible-checkbox">
-    <span data-i18n="dynamicContentPause"></span>
+    <span data-lw_i18n="dynamicContentPause"></span>
   </div>
-  <span class="tooltip-content" data-i18n="dynamicContentPause_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="dynamicContentPause_tooltip"></span>
 </label>
 
-<h4 data-i18n="orient_title"></h4>
+<h4 data-lw_i18n="orient_title"></h4>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="highlightHover" class="accessible-checkbox">
-    <span data-i18n="highlightHover"></span>
+    <span data-lw_i18n="highlightHover"></span>
   </div>
-  <span class="tooltip-content" data-i18n="highlightHover_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="highlightHover_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="hideImages" class="accessible-checkbox">
-    <span data-i18n="hideImages"></span>
+    <span data-lw_i18n="hideImages"></span>
   </div>
-  <span class="tooltip-content" data-i18n="hideImages_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="hideImages_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="largeCursor" class="accessible-checkbox">
-    <span data-i18n="largeCursor"></span>
+    <span data-lw_i18n="largeCursor"></span>
   </div>
-  <span class="tooltip-content" data-i18n="largeCursor_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="largeCursor_tooltip"></span>
 </label>
 
 <label class="label-tooltip">
   <div class="checkbox-wrapper">
     <input type="checkbox" id="readingMask" class="accessible-checkbox">
-    <span data-i18n="readingMask"></span>
+    <span data-lw_i18n="readingMask"></span>
   </div>
-  <span class="tooltip-content" data-i18n="readingMask_tooltip"></span>
+  <span class="tooltip-content" data-lw_i18n="readingMask_tooltip"></span>
 </label>
 
 <div id="accessibility-footer" style="margin-top: 2rem; text-align: center; font-size: 0.8rem;">
 <p>Powered by <strong>Ludosweb</strong></p>
-<button id="openCompliance" data-i18n="complianceBtn" style="margin-top: 0.5rem; padding: 6px 12px; font-size: 0.85rem; background: var(--primary-color); color: white; border: none; border-radius: 6px; cursor: pointer;">
+<button id="openCompliance" data-lw_i18n="complianceBtn" style="margin-top: 0.5rem; padding: 6px 12px; font-size: 0.85rem; background: var(--primary-color); color: white; border: none; border-radius: 6px; cursor: pointer;">
 </button>
 </div>
 
@@ -241,11 +241,11 @@ align-items: center;
     color: #333;
   ">✕</button>
 
-  <h1 data-i18n="complianceTitle" style="color: var(--primary-color); font-size: 1.4rem;"></h1>
+  <h1 data-lw_i18n="complianceTitle" style="color: var(--primary-color); font-size: 1.4rem;"></h1>
 
-  <p data-i18n="complianceStatus"></p>
+  <p data-lw_i18n="complianceStatus"></p>
 
-  <div data-i18n="complianceDescription"></div>
+  <div data-lw_i18n="complianceDescription"></div>
 
  
 </div>

@@ -12,7 +12,7 @@ import { panelTemplate } from './templates/panel';
 import { initUI } from './js/ui';
 import { applyAccessibility, resetAccessibility } from './js/accessibility';
 import { loadSettings } from './js/settings';
-import { i18n, userLang } from './js/i18n';
+import { lw_i18n, userLang } from './js/lw_i18n';
 
 (function LudoswebAccessibility() {
 
@@ -23,7 +23,7 @@ import { i18n, userLang } from './js/i18n';
 
 
         // Add this where you initialize the accessibility panel
-        const position = accessibility_var?.position || 'right';
+        const position = lw_accessibility_var?.position || 'right';
         if (position === 'left') {
             document.getElementById('lw-a-accessibility-btn').classList.add('position-left');
             document.getElementById('accessibility-panel').classList.add('position-left');
@@ -93,11 +93,11 @@ import { i18n, userLang } from './js/i18n';
         document.getElementById('languageSelect').addEventListener('change', function () {
             const selectedLang = this.value;
             localStorage.setItem("accessibilitySettings_lang", selectedLang);
-            const langPack = i18n[selectedLang] || i18n['it'];
-            document.querySelectorAll("[data-i18n]").forEach(elem => {
-                const key = elem.getAttribute("data-i18n");
+            const langPack = lw_i18n[selectedLang] || lw_i18n['it'];
+            document.querySelectorAll("[data-lw_i18n]").forEach(elem => {
+                const key = elem.getAttribute("data-lw_i18n");
 
-                const value = langPack[key] || i18n['it'][key];
+                const value = langPack[key] || lw_i18n['it'][key];
 
                 if (value) {
                     if (key === 'complianceDescription') {
