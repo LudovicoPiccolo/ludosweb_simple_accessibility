@@ -16,9 +16,13 @@ import { lw_i18n, userLang } from './js/lw_i18n';
 
 (function LudoswebAccessibility() {
 
-    window.addEventListener('DOMContentLoaded', function () {
-        // HTML template injection
+    if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', initAccessibilityPanel);
+} else {
+  initAccessibilityPanel(); // DOM già pronto
+}
 
+function initAccessibilityPanel() {
         document.body.insertAdjacentHTML('beforeend', panelTemplate);
 
 
@@ -199,6 +203,6 @@ import { lw_i18n, userLang } from './js/lw_i18n';
                 applyAccessibility(elements);
             }
         });
-    })
+    }
 })();
 
